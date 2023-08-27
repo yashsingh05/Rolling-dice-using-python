@@ -1,0 +1,29 @@
+# Import the 'random' module to generate random numbers
+import random
+
+# Define a function to simulate rolling a dice
+def rolling_dice():
+    # Generate a random number between 1 and 6 (inclusive)
+    dice_number = random.randint(1, 6)
+    return dice_number
+
+# Display a welcome message for the dice rolling game
+print("!!!!!!!WELCOME TO DICE ROLLING GAME!!!!!!!")
+
+# Ask the user if they want to roll the dice
+choice = input("DO YOU WANT TO ROLL THE DICE? (y/n)\n")
+
+# Check if the user's choice is 'y' (yes)
+if choice.lower() == 'y':
+    print("ROLLING DICE......")
+    # Call the rolling_dice function to get a random dice number
+    number = rolling_dice()
+    print("DICE HAS THE NUMBER:", number)
+
+# Check if the user's choice is 'n' (no)
+elif choice.lower() == 'n':
+    print("EXITING......")
+
+# If the input is neither 'y' nor 'n'
+else:
+    print("INVALID INPUT")
